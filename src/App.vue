@@ -81,6 +81,20 @@
 
     </section>
 
+    <section>
+
+      <div id="fifth-section">
+
+        <my-label class="our-concept-title" msg="ABOUT OUR CONCEPT"></my-label>
+
+        <my-label class="our-concept-text" msg="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet lorem ut accumsan posuere. Vivamus ullamcorper metus purus, sit amet varius sem elementum nec."></my-label>
+
+        <concept-links class="our-concept-links"></concept-links>
+
+      </div>
+
+    </section>
+
   </div>
 </template>
 
@@ -98,6 +112,7 @@
   import DishesLegend from "@/components/Moleculs/Dishes-legend"
   import menuPriceBack from "@/components/Atoms/Decorations/yellow-menu-prices.vue"
   import dishPrice from "@/components/Moleculs/Dishes-Prices.vue"
+  import conceptLinks from "@/components/Moleculs/Concept-link.vue"
 
 
   export default {
@@ -111,6 +126,9 @@
       guide,
 
       yellowBack, dishList, DishesLegend, menuPriceBack, dishPrice,
+
+      conceptLinks,
+
     }
   }
 </script>
@@ -168,6 +186,7 @@
     margin-left: auto;
     margin-right: auto;
     border: #FFBA00 2px solid;
+    position: relative;
   }
 
   #fourth-section {
@@ -184,6 +203,15 @@
     height: 1200px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #fifth-section {
+    height: 410px;
+    width: 1434px;
+    margin-left: auto;
+    margin-right: auto;
+    border: #FFBA00 2px solid;
+    position: relative;
   }
 
   .rectangle {
@@ -312,6 +340,33 @@
     top: 38%;
     left: 90%;
   }
+
+  .our-concept-title .texting {
+    color: #FFBA00;
+    font-family: 'Assistant', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 38%;
+    top: 20%;
+  }
+
+  .our-concept-text .texting {
+    font-size: 20px;
+    width: 850px;
+    position: absolute;
+    left: 22%;
+    top: 35%;
+  }
+
+  .our-concept-links{
+    position: absolute;
+    left: 35%;
+    top: 60%;
+  }
+
 
 
   body {
