@@ -95,6 +95,30 @@
 
     </section>
 
+    <section>
+
+      <div id="sixth-section">
+
+        <img alt="MasterClass" src="./assets/MasterClass.png">
+
+        <yellow-master class="yellow-master"></yellow-master>
+
+        <Apply class="Apply"></Apply>
+
+        <my-label msg="MASTERCLASS" class="master-title"></my-label>
+
+        <my-label class="MasterDescription" msg="| THE RECIPE FOR THE MOST DELICIOUS PIZZA DOUGH |"></my-label>
+
+        <my-label class="MasterSlogan" msg="waiting for you!"></my-label>
+
+        <my-label class="MasterPrice" msg="PRICE 15$"></my-label>
+
+        <my-label class="MasterTime" msg="12:00-15:00"></my-label>
+
+      </div>
+
+    </section>
+
   </div>
 </template>
 
@@ -113,6 +137,8 @@
   import menuPriceBack from "@/components/Atoms/Decorations/yellow-menu-prices.vue"
   import dishPrice from "@/components/Moleculs/Dishes-Prices.vue"
   import conceptLinks from "@/components/Moleculs/Concept-link.vue"
+  import yellowMaster from "@/components/Atoms/Decorations/yellow-master-description.vue"
+  import Apply from "@/components/Atoms/Buttons/Apply";
 
 
   export default {
@@ -128,6 +154,8 @@
       yellowBack, dishList, DishesLegend, menuPriceBack, dishPrice,
 
       conceptLinks,
+
+      yellowMaster, Apply,
 
     }
   }
@@ -212,6 +240,22 @@
     margin-right: auto;
     border: #FFBA00 2px solid;
     position: relative;
+  }
+
+  #sixth-section {
+    width: 1434px;
+    height: 1200px;
+    border: #FFBA00 2px solid;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  #sixth-section img {
+    width: 1434px;
+    height: 1200px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .rectangle {
@@ -367,7 +411,66 @@
     top: 60%;
   }
 
+  .yellow-master {
+    position: absolute;
+    top: -10%;
+    left: 645px;
+    bottom: 0;
+    right: 0;
+  }
 
+  .Apply {
+    position: absolute;
+    top: 80%;
+    left: 836px;
+    bottom: 0;
+    right: 0;
+  }
+
+  .master-title .texting {
+    position: absolute;
+    top: 4%;
+    left: 61%;
+    font-size: 60px;
+    font-weight: 600;
+  }
+
+  .MasterDescription .texting {
+    position: absolute;
+    width: 430px;
+    top: 23%;
+    left: 57%;
+    font-size: 50px;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .MasterSlogan .texting {
+    position: absolute;
+    top: 47%;
+    left: 57%;
+    font-size: 45px;
+    font-weight: 600;
+    font-family: 'Assistant', sans-serif;
+  }
+
+  .MasterPrice .texting {
+    position: absolute;
+    top: 56%;
+    left: 72%;
+    font-weight: 600;
+    font-size: 43px;
+    font-family: 'Assistant', sans-serif;
+  }
+
+  .MasterTime .texting {
+    position: absolute;
+    top: 60%;
+    left: 72%;
+    font-weight: 600;
+    font-size: 43px;
+    font-family: 'Assistant', sans-serif;
+  }
 
   body {
     background-color: #242424;
