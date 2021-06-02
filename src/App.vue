@@ -119,6 +119,28 @@
 
     </section>
 
+    <section>
+
+      <div id="seventh-section">
+
+        <my-label class="gallery-title" msg="GALLERY"></my-label>
+
+        <img class="gallery-first" alt="Gallery-first" src="./assets/Gallery1stPicture.png">
+
+        <img class="gallery-second" alt="Gallery-second" src="./assets/Gallery2Picture.png">
+
+        <img class="gallery-third" alt="Gallery-third" src="./assets/Gallery3Picture.png">
+
+
+      </div>
+
+    </section>
+
+    <footer>
+
+
+    </footer>
+
   </div>
 </template>
 
@@ -256,6 +278,15 @@
     height: 1200px;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  #seventh-section {
+    width: 1434px;
+    height: 1250px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: #FFBA00 2px solid;
   }
 
   .rectangle {
@@ -472,8 +503,38 @@
     font-family: 'Assistant', sans-serif;
   }
 
+  .gallery-title .texting {
+    font-size: 80px;
+    font-weight: 700;
+    color: #FFBA00;
+    font-family: 'Assistant', sans-serif;
+  }
+
+  .gallery-first {
+    float: left;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .gallery-third {
+    float: right;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  footer {
+    width: 100%;
+    height: 320px;
+    background-color: #483500;
+  }
+
   body {
     background-color: #242424;
+    margin:0;
   }
 </style>
 
