@@ -1,8 +1,8 @@
 <template>
     <div class="second-text">
-        <Mylabel id="firstLi" class="first" msg="| Sed do eiusmod tempor incididunt ut Labore et"></Mylabel>
-        <Mylabel class="second" msg="| NON-TERRAE PLUS ULTRA!"></Mylabel>
-        <Mylabel class="third " msg="| Why so slow?Break a leg or something?"></Mylabel>
+        <Mylabel id="firstLi" class="offer-menu first" msg="| Sed do eiusmod tempor incididunt ut Labore et"></Mylabel>
+        <Mylabel class="offer-menu second" msg="| NON-TERRAE PLUS ULTRA!"></Mylabel>
+        <Mylabel class="offer-menu third " msg="| Why so slow?Break a leg or something?"></Mylabel>
     </div>
 </template>
 
@@ -56,5 +56,12 @@
         width: 680px;
         text-align: left;
         line-height: normal;
+    }
+    
+    @media (max-width: 767px) {
+        .offer-menu {
+            left: 5%;
+        }
+        
     }
 </style>

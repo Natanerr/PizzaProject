@@ -45,4 +45,10 @@
         top:40%;
     }
 
+    @media (max-width: 767px) {
+        .hashtag-box {
+            display: none;
+        }
+    }
+
 </style>

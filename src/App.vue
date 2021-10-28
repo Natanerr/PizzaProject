@@ -7,7 +7,7 @@
 
         <img id="pizza1" alt="pizza" src="./assets/layer.png">
 
-        <Menu></Menu>
+        <Menu class="media-menu"></Menu>
 
         <hashtag class="hashtag"></hashtag>
 
@@ -29,7 +29,7 @@
 
       <div id="second-section">
 
-        <img alt="pizza.exe" src="./assets/RightPizza.png">
+        <img class="image-pizza2" alt="pizza.exe" src="./assets/RightPizza.png">
 
         <MyLabel class="what-new" msg="What new?"></MyLabel>
 
@@ -138,6 +138,19 @@
 
     <footer>
 
+      <div class="footer-wrapper">
+
+        <div class="float">
+          <footer-component msg="About"></footer-component>
+        </div>
+
+        <grid-label1></grid-label1>
+
+        <grid-label2></grid-label2>
+
+        <grid-label3></grid-label3>
+
+      </div>
 
     </footer>
 
@@ -145,22 +158,26 @@
 </template>
 
 <script>
-  import hashtag from "@/components/Atoms/Labels/hashtag-box"
-  import ribbon from "@/components/Atoms/Decorations/yellow-ribbon.vue"
-  import readMore from "@/components/Atoms/Buttons/read-more.vue"
-  import rectangle from "@/components/Atoms/Decorations/yellow-rectangle.vue"
-  import OfferMenu from "@/components/Moleculs/Offer-menu.vue"
-  import guide from "@/components/Moleculs/guide-menu.vue"
-  import Menu from "@/components/Moleculs/Menu"
-  import MyLabel from "@/components/Atoms/Labels/Mylabel.vue"
-  import yellowBack from "@/components/Atoms/Decorations/yellow-menu-background.vue"
-  import dishList from "@/components/Moleculs/Dishes-list.vue"
-  import DishesLegend from "@/components/Moleculs/Dishes-legend"
-  import menuPriceBack from "@/components/Atoms/Decorations/yellow-menu-prices.vue"
-  import dishPrice from "@/components/Moleculs/Dishes-Prices.vue"
-  import conceptLinks from "@/components/Moleculs/Concept-link.vue"
-  import yellowMaster from "@/components/Atoms/Decorations/yellow-master-description.vue"
+  import hashtag from "@/components/Atoms/Labels/hashtag-box";
+  import ribbon from "@/components/Atoms/Decorations/yellow-ribbon.vue";
+  import readMore from "@/components/Atoms/Buttons/read-more.vue";
+  import rectangle from "@/components/Atoms/Decorations/yellow-rectangle.vue";
+  import OfferMenu from "@/components/Moleculs/Offer-menu.vue";
+  import guide from "@/components/Moleculs/guide-menu.vue";
+  import Menu from "@/components/Moleculs/Menu";
+  import MyLabel from "@/components/Atoms/Labels/Mylabel.vue";
+  import yellowBack from "@/components/Atoms/Decorations/yellow-menu-background.vue";
+  import dishList from "@/components/Moleculs/Dishes-list.vue";
+  import DishesLegend from "@/components/Moleculs/Dishes-legend";
+  import menuPriceBack from "@/components/Atoms/Decorations/yellow-menu-prices.vue";
+  import dishPrice from "@/components/Moleculs/Dishes-Prices.vue";
+  import conceptLinks from "@/components/Moleculs/Concept-link.vue";
+  import yellowMaster from "@/components/Atoms/Decorations/yellow-master-description.vue";
   import Apply from "@/components/Atoms/Buttons/Apply";
+  import footerComponent from "@/components/Moleculs/footer-component.vue";
+  import gridLabel1 from "@/components/Atoms/Labels/grid-label1.vue";
+  import gridLabel2 from "@/components/Atoms/Labels/grid-label2.vue";
+  import gridLabel3 from "@/components/Atoms/Labels/grid-label3.vue";
 
 
   export default {
@@ -178,6 +195,8 @@
       conceptLinks,
 
       yellowMaster, Apply,
+
+      footerComponent, gridLabel1, gridLabel2, gridLabel3,
 
     }
   }
@@ -526,10 +545,69 @@
     margin: auto;
   }
 
+  .footer-wrapper {
+    border: orange 2px solid;
+    border-bottom: none;
+    border-top: none;
+    width: 1434px;
+    height: 320px;
+    margin: 0 auto;
+    background-color: #FFBA00;
+  }
+
+  @media (max-width:1437px ) {
+      #app {
+        max-width: 970px;
+      }
+  }
+
+  @media (max-width:992px ) {
+    #app {
+      max-width: 750px;
+    }
+  }
+
+  @media (max-width:767px ) {
+    #app {
+      max-width: none;
+    }
+
+    p { font-size: 20px}
+
+    .new-format { display: none; }
+
+    .grand .texting , .opening .texting {
+      font-size: 150px;
+      font-weight: bold;
+      font-family: Alef, sans-serif;
+    }
+
+    .grand .texting { left: 2%; top: 40%; }
+    .opening .texting { left: 45%; top: 27%;}
+
+    .media-menu .texting {
+      font-family: Alef, sans-serif;
+      font-size: 70px;
+      font-weight: bolder;
+    }
+
+    .what-new .texting  {
+      left: 5%;
+      font-weight: bolder;
+    }
+
+    .image-pizza2 {
+      height: 100%;
+      width: 100%;
+    }
+
+  }
+
+
   footer {
     width: 100%;
     height: 320px;
-    background-color: #483500;
+    background-color: #FFBA00;
   }
 
   body {

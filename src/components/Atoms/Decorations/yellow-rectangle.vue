@@ -16,4 +16,10 @@
         height: 190px;
         background-color: #FFBA00;
     }
+
+    @media (max-width: 767px) {
+        .rectangle {
+            display: none;
+        }
+    }
 </style>

@@ -34,6 +34,12 @@
         font-family: 'Varela Round', sans-serif;
     }
 
+    @media (max-width: 767px) {
+        .read-more-button {
+            display: none;
+        }
+    }
+
 </style>
 
 <style>
