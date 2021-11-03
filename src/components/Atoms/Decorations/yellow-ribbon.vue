@@ -12,7 +12,7 @@
 <style scoped>
     .ribbon {
         width: 100%;
-        height: 200px;
+        height: 250px;
         background-color: #FFBA00;
         display: flex;
         position: absolute;
