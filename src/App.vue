@@ -1,6 +1,8 @@
 <template>
   <div id="app">
 
+    <img src="./assets/ScrollButton.png" alt="Scroll Button" class="top" id="top" @click="scrollToTop">
+
     <section>
 
       <div  id="first-section">
@@ -11,7 +13,7 @@
 
         <hashtag class="hashtag"></hashtag>
 
-        <ribbon></ribbon>
+        <yellow-ribbon></yellow-ribbon>
 
         <read-more class="read-more"></read-more>
 
@@ -42,6 +44,8 @@
       </div>
 
     </section>
+
+    <div id="specialAnchor"></div>
 
     <section>
 
@@ -138,7 +142,7 @@
 
     <footer>
 
-      <div class="footer-wrapper">
+      <div class="footer-wrapper" id="footer">
 
         <div class="float">
           <footer-component msg="About"></footer-component>
@@ -153,13 +157,11 @@
       </div>
 
     </footer>
-
   </div>
 </template>
 
 <script>
   import hashtag from "@/components/Atoms/Labels/hashtag-box";
-  import ribbon from "@/components/Atoms/Decorations/yellow-ribbon.vue";
   import readMore from "@/components/Atoms/Buttons/read-more.vue";
   import rectangle from "@/components/Atoms/Decorations/yellow-rectangle.vue";
   import OfferMenu from "@/components/Moleculs/Offer-menu.vue";
@@ -178,13 +180,14 @@
   import gridLabel1 from "@/components/Atoms/Labels/grid-label1.vue";
   import gridLabel2 from "@/components/Atoms/Labels/grid-label2.vue";
   import gridLabel3 from "@/components/Atoms/Labels/grid-label3.vue";
+  import yellowRibbon from "@/components/Atoms/Decorations/yellow-ribbon";
 
 
   export default {
     name: 'App',
     components: {
 
-      hashtag, ribbon, readMore,  Menu, MyLabel,
+      hashtag, readMore,  Menu, MyLabel, yellowRibbon,
 
       rectangle, OfferMenu,
 
@@ -198,6 +201,13 @@
 
       footerComponent, gridLabel1, gridLabel2, gridLabel3,
 
+    },
+    methods: {
+        scrollToTop() {
+          document.getElementById("top").onclick = function () {
+            window.scrollTo(0,0);
+          }
+        }
     }
   }
 </script>
@@ -301,11 +311,25 @@
 
   #seventh-section {
     width: 1434px;
-    height: 1250px;
+    height: 930px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     border: #FFBA00 2px solid;
+  }
+
+  .top {
+    position: fixed;
+    right: 2%;
+    bottom: 3%;
+    width: 100px;
+    height: auto;
+  }
+
+  .media-menu {
+    position: absolute;
+    top: 5%;
+    right: 1%;
   }
 
   .rectangle {
@@ -321,29 +345,50 @@
 
   .read-more {
     position: absolute;
-    top: 57%;
-    left: 57%;
+    top: 50%;
+    left: 65%;
   }
 
   .grand .texting {
     position: absolute;
     font-weight: bolder;
-    font-size: 120px;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: white;
-    top: 43%;
-    left: 14%;
+    font-size: 130px;
+    font-family: Alef, sans-serif;
+    top: 39%;
+    left: 8%;
     margin: 0;
+    color: transparent;
+    background: url(assets/back.png);
+    -webkit-text-stroke: 2px #ffffff;
+    -webkit-background-clip: text;
+    animation: back 20s linear infinite;
+  }
+
+  @keyframes back {
+    100% {
+      background-position: 2000px 1000px;
+    }
   }
 
   .opening .texting {
     position: absolute;
-    top: 44%;
-    left: 14%;
-    color: white;
-    font-family: 'Assistant', sans-serif;
-    font-size: 110px;
+    top: 39%;
+    left: 12%;
+    color: transparent;
+    background: url(assets/back.png);
+    -webkit-text-stroke: 2px #ffffff;
+    -webkit-background-clip: text;
+    animation: back2 20s linear infinite;
+    font-family: Alef, sans-serif;
+    font-size: 130px;
+    font-weight: bolder;
     letter-spacing: 13px;
+  }
+
+  @keyframes back2 {
+    100% {
+      background-position: 2000px 0;
+    }
   }
 
   .what-new .texting {
@@ -357,8 +402,6 @@
     margin: 0;
     padding: 0;
   }
-
-
 
   .new-format .texting {
     position: absolute;
@@ -556,9 +599,9 @@
   }
 
   @media (max-width:1437px ) {
-      #app {
-        max-width: 970px;
-      }
+    #app {
+      max-width: 970px;
+    }
   }
 
   @media (max-width:992px ) {
@@ -582,13 +625,19 @@
       font-family: Alef, sans-serif;
     }
 
+    .yellow-menu { display: none; }
+
+    .dishPricesBack { display: none; }
+
     .grand .texting { left: 2%; top: 40%; }
+
     .opening .texting { left: 45%; top: 27%;}
 
-    .media-menu .texting {
+    .media-menu {
       font-family: Alef, sans-serif;
       font-size: 70px;
       font-weight: bolder;
+      right: 12%;
     }
 
     .what-new .texting  {

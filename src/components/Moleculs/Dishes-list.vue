@@ -39,4 +39,22 @@
         font-family: 'Varela Round', sans-serif;
         font-size:40px;
     }
+
+    @media (max-width: 767px) {
+        .dishes-title .texting {
+            font-weight: bold;
+            font-family: Alef, sans-serif;
+            font-size: 70px;
+            position: relative;
+            margin-left: -23%;
+            margin-top: -5%;
+        }
+
+        .dishes-composition .texting {
+            position: relative;
+            margin-left: -23%;
+            margin-bottom: 15%;
+            font-size: 45px;
+        }
+    }
 </style>

@@ -23,4 +23,13 @@
         margin-bottom: 70px;
         font-size: 40px;
     }
+    @media (max-width: 767px) {
+        .price .texting {
+            font-size: 80px;
+            position: relative;
+            margin-top: -75%;
+            margin-bottom: 125%;
+            margin-left: -225%;
+        }
+    }
 </style>

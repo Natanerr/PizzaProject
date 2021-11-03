@@ -1,7 +1,7 @@
 <template>
     <div class="grid3">
 
-        <p class="grid-item3 grid-item1">Contact</p>
+        <p class="grid-item3 grid-item1" @click="scrollToBottom">Contact</p>
 
         <p class="grid-item3">Email</p>
 
@@ -16,7 +16,15 @@
 
 <script>
     export default {
-        name: "grid-label3"
+        name: "grid-label3",
+        methods: {
+            scrollToBottom() {
+                const element = document.getElementById("footer");
+
+                element.scrollIntoView()
+
+            }
+        }
     }
 </script>
 
@@ -34,9 +42,12 @@
     }
 
     .grid-item1 {
-        font-style: italic;
         font-weight: bold;
         font-size: larger;
+    }
+
+    .grid-item1:hover {
+        cursor:pointer;
     }
 
 </style>

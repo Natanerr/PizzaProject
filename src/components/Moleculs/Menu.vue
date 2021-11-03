@@ -1,75 +1,92 @@
 <template>
     <div class="MenuCell">
-
-        <Mylabel class="Cum" msg="Menu" id="menu-cell1"></Mylabel>
-
-        <Mylabel msg="Blog" id="menu-cell2"></Mylabel>
-
-        <Mylabel msg="About Us" id="menu-cell3"></Mylabel>
-
-        <Mylabel msg="Contacts" id="menu-cell4"></Mylabel>
+        <a class="menu Menu1" id="Menu" @click="scrollToMenu">Menu</a>
+        <a class="menu Master1" id="Master" @click="scrollToMaster">Master class</a>
+        <a class="menu About1" id="About" @click="scrollToAbout">About Us</a>
+        <a class="menu Gallery1" id="Gallery" @click="scrollToGallery">Gallery</a>
     </div>
 </template>
 
 <script>
-
-    import Mylabel from '@/components/Atoms/Labels/Mylabel.vue'
-
     export default {
         name: "Menu",
-        components: {
-            Mylabel
+        methods: {
+            scrollToMenu() {
+
+                let menuElement = document.getElementById("fourth-section");
+                let btn = document.querySelector('.Menu1');
+
+                function handleButtonClick() {
+                    menuElement.scrollIntoView({block: "center", behavior: "smooth"});
+                }
+
+                btn.addEventListener('click', handleButtonClick);
+
+                },
+
+            scrollToMaster() {
+
+                let hiddenElement = document.getElementById("sixth-section");
+                let btn = document.querySelector('.Master1');
+
+                function handleButtonClick() {
+                    hiddenElement.scrollIntoView({block: "center", behavior: "smooth"});
+                }
+
+                btn.addEventListener('click', handleButtonClick);
+                },
+
+            scrollToAbout() {
+                let hiddenElement = document.getElementById("fifth-section");
+                let btn = document.querySelector('.About1');
+
+                function handleButtonClick() {
+                    hiddenElement.scrollIntoView({block: "center", behavior: "smooth"});
+                }
+
+                btn.addEventListener('click', handleButtonClick);
+            },
+            scrollToGallery() {
+                let hiddenElement = document.getElementById("seventh-section");
+                let btn = document.querySelector('.Gallery1');
+
+                function handleButtonClick() {
+                    hiddenElement.scrollIntoView({block: "center", behavior: "smooth"});
+                }
+
+                btn.addEventListener('click', handleButtonClick);
+            }
+            }
         }
-    }
+
 </script>
 
 <style>
-    #menu-cell1{
-        display: inline-block;
-        position: absolute;
-        top: 10px;
-        left: 40%;
-    }
-    #menu-cell2{
-        display: inline-block;
-        position: absolute;
-        top: 10px;
-        left: 50%;
-    }
-    #menu-cell3{
-        display: inline-block;
-        position: absolute;
-        top: 10px;
-        left: 58%;
-    }
-    #menu-cell4{
-        display: inline-block;
-        position: absolute;
-        top: 10px;
-        left: 71%;
+
+    .menu {
+        display: inline-flex;
+        font-size: 50px;
+        padding: 0 0 0 35px;
+        float: right;
+        font-family: Alef, sans-serif;
+        flex: 1;
+        color: transparent;
+        -webkit-text-stroke: 3px #FFBA00;
+        transition: transform 0.6s;
     }
 
-    @media (max-width: 767px) {
-        #menu-cell1 {
-            left: 5%;
-            top: -2%;
-        }
-
-        #menu-cell2 {
-            left: 25%;
-            top: -2%;
-        }
-
-        #menu-cell3 {
-            left: 45%;
-            top: -2%
-        }
-
-        #menu-cell4 {
-            left: 75%;
-            top: -2%;
-        }
+    .menu:hover {
+        -ms-transform: scale(1.3);
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        cursor: pointer;
     }
+
+    .menu:first-child {
+        margin-right: 50px;
+    }
+
+
 
 
 </style>

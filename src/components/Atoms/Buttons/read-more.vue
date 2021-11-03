@@ -1,5 +1,5 @@
 <template>
-    <div class="read-more-button">
+    <div class="read-more-button" @click="scrollToNew">
         <Mylabel msg="READ MORE"></Mylabel>
     </div>
 </template>
@@ -11,6 +11,18 @@
         name: "read-more",
         components: {
             Mylabel
+        },
+        methods: {
+            scrollToNew() {
+                let hiddenElement = document.getElementById("specialAnchor");
+                let btn = document.querySelector('.read-more-button');
+
+                function handleButtonClick() {
+                    hiddenElement.scrollIntoView({block: "center", behavior: "smooth"});
+                }
+
+                btn.addEventListener('click', handleButtonClick);
+            }
         }
     }
 </script>
@@ -22,16 +34,27 @@
         border: white 4px solid;
         width: 250px;
         height: 50px;
-        padding-left: 30px;
         padding-top: 15px;
         font-size: 30px;
         font-weight: 600;
         color: white;
+        transition: transform 0.5s;
+    }
+
+    .read-more-button:hover {
+        -ms-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.1);
+        cursor: pointer;
     }
 
     .read-more-button .texting {
         margin: 0;
         font-family: 'Varela Round', sans-serif;
+    }
+
+    .read-more-button:hover {
+
     }
 
     @media (max-width: 767px) {

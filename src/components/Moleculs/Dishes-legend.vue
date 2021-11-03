@@ -27,5 +27,13 @@
         border: aliceblue 2px solid;
         width: 1000px;
     }
+    
+    @media (max-width: 767px) {
+        .legend-wrapper {
+            display: block;
+            position: relative;
+            margin-left: -11%;
+        }
+    }
 
 </style>

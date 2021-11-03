@@ -1,48 +1,56 @@
 <template>
-    <div class="hashtag-box">
-        <Mylabel msg="#" class="pizzeria1"></Mylabel>
-        <Mylabel msg="pizzeria." class="pizzeria"></Mylabel>
+    <div class="hashtag-box btn" @click="copyContent">
+        <span class="topword">#bestpizzaever</span>
     </div>
 </template>
 
 <script>
-    import Mylabel from "@/components/Atoms/Labels/Mylabel.vue"
 
     export default {
+        clipboard: null,
         name: "hashtag",
-        components: {
-            Mylabel
+
+        methods: {
+
+            copyContent() {
+
+
+                const clipboard = require("clipboard");
+                this.clipboard = new clipboard(".btn", {
+
+                    target: function () {
+                        return document.querySelector(".topword");
+                    }
+
+                })
+            }
         }
     }
 </script>
 
 <style>
 
+    .topword {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        font-size: 45px;
+        font-weight: bold;
+        font-family: Alef, sans-serif;
+    }
+
     .hashtag-box{
         width: 380px;
         height: 85px;
         background-color: #FFBA00;
+        position: relative;
     }
 
-    .pizzeria .texting {
-        position: absolute;
-        display: inline-block;
-        font-size: 45px;
-        font-family: Alef, sans-serif;
-        font-weight: 700;
-        margin: 0;
-        left: 40%;
-        top: 25%;
-    }
-
-    .pizzeria1 .texting {
-        display: inline-block;
-        position: absolute;
-        font-size: 40px;
-        font-family: sans-serif;
-        margin: 0;
-        left: 33%;
-        top:40%;
+    .hashtag-box:hover {
+        cursor: pointer;
     }
 
     @media (max-width: 767px) {

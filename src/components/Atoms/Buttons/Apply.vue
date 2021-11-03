@@ -29,4 +29,13 @@
         font-weight: 600;
     }
 
+    @media (max-width: 767px) {
+        .ApplyWord .texting {
+            color: #242424;
+            font-weight: bold;
+            font-size: 70px;
+            margin: 10px 0 0 50px;
+        }
+    }
+
 </style>

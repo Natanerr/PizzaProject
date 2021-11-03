@@ -31,5 +31,15 @@
         display: flex;
         margin: 0;
     }
+    
+    @media (max-width: 767px) {
+        .Concept-link {
+            display: none;
+        }
+
+        .Concept-link-wrapper {
+            display: none;
+        }
+    }
 
 </style>
