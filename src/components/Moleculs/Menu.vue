@@ -66,7 +66,7 @@
     .menu {
         display: inline-flex;
         font-size: 50px;
-        padding: 0 0 0 35px;
+        padding: 0 0 0 50px;
         float: right;
         font-family: Alef, sans-serif;
         flex: 1;

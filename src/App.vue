@@ -89,6 +89,10 @@
 
       <div id="fifth-section">
 
+        <img src="./assets/littlepizza.png" alt="littlepizza1" class="littlePizza">
+
+        <img src="./assets/littlepizza.png" alt="littlepizza2" class="littlePizza">
+
         <my-label class="our-concept-title" msg="ABOUT OUR CONCEPT"></my-label>
 
         <my-label class="our-concept-text" msg="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet lorem ut accumsan posuere. Vivamus ullamcorper metus purus, sit amet varius sem elementum nec."></my-label>
@@ -204,8 +208,11 @@
     },
     methods: {
         scrollToTop() {
+
+          let elem = document.getElementById("first-section")
+
           document.getElementById("top").onclick = function () {
-            window.scrollTo(0,0);
+            elem.scrollIntoView({ block: "start", behavior: "smooth" })
           }
         }
     }
@@ -478,6 +485,10 @@
     left: 90%;
   }
 
+  .littlePizza {
+    display: none;
+  }
+
   .our-concept-title .texting {
     color: #FFBA00;
     font-family: 'Assistant', sans-serif;
@@ -518,6 +529,12 @@
     left: 836px;
     bottom: 0;
     right: 0;
+    opacity: 0.6;
+  }
+
+  .Apply:hover {
+    opacity: 1;
+    cursor: pointer;
   }
 
   .master-title .texting {
@@ -648,6 +665,86 @@
     .image-pizza2 {
       height: 100%;
       width: 100%;
+    }
+
+
+    .our-concept-title .texting {
+      font-weight: bolder;
+      font-family: Alef, sans-serif;
+      font-size: 80px;
+      position: absolute;
+      top: 5%;
+      left: 20%;
+    }
+
+    .our-concept-text .texting {
+      font-size: 38px;
+      font-family: Alef, sans-serif;
+      font-weight: bolder;
+      text-justify: auto;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      top: 50%;
+    }
+
+    .littlePizza {
+      display: flex;
+      width: 250px;
+      position: absolute;
+      left: 2%;
+      top: 15%;
+    }
+
+    .littlePizza:first-child {
+      left: 81%;
+    }
+
+    .master-title .texting {
+      font-weight: bolder;
+      font-family: Alef, sans-serif;
+      font-size: 120px;
+      left: 21%;
+      top: -5%;
+    }
+
+    .MasterDescription .texting {
+      left: 21%;
+      display: inline-flex;
+      width: 840px;
+      font-weight: bolder;
+      font-family: Alef, sans-serif;
+      font-size: 70px;
+    }
+
+    .MasterSlogan .texting {
+      font-family: Alef, sans-serif;
+      font-weight: bolder;
+      font-size: 65px;
+      left: 21%;
+    }
+
+    .MasterPrice .texting {
+      left: 21%;
+    }
+
+    .MasterTime .texting {
+      left: 21%;
+    }
+
+    .Apply {
+      left: 12%;
+      width: 330px;
+      align-items: center;
+      opacity: 0.6;
+    }
+
+    .Apply:hover {
+      opacity: 1;
+    }
+
+    .top {
+      display: none;
     }
 
   }
