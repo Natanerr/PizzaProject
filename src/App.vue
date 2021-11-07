@@ -139,7 +139,6 @@
 
         <img class="gallery-third" alt="Gallery-third" src="./assets/Gallery3Picture.png">
 
-
       </div>
 
     </section>
